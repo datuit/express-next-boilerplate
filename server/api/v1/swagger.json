@@ -1,0 +1,72 @@
+{
+  "info": {
+    "title": "iCareBase",
+    "version": "1.0.0"
+  },
+  "basePath": "/",
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/api/v1/user/register": {
+      "post": {
+        "tags": ["FE_Authenticate"],
+        "summary": "Auth Register",
+        "description": "User Register",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "info",
+            "description": "user object",
+            "in": "body",
+            "required": true,
+            "type": "string",
+            "example": {
+              "username": "dat",
+              "password": "123456"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User Register"
+          }
+        }
+      }
+    },
+    "/api/v1/user/login": {
+      "post": {
+        "tags": ["FE_Authenticate"],
+        "summary": "Auth Login",
+        "description": "User Login",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "info",
+            "description": "user object",
+            "in": "body",
+            "required": true,
+            "type": "string",
+            "example": {
+              "username": "dat",
+              "password": "123456"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User Login"
+          }
+        }
+      }
+    }
+  },
+  "responses": {},
+  "parameters": {},
+  "tags": []
+}

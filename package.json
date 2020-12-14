@@ -1,0 +1,50 @@
+{
+  "name": "custom-server-express",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node server/index.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.13.0",
+    "bcrypt": "^5.0.0",
+    "chalk": "^4.1.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.8.0",
+    "ip": "^1.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "minimist": "^1.2.5",
+    "next": "latest",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "swagger-ui-express": "^4.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@prisma/cli": "^2.13.0",
+    "husky": "^4.3.5",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "_moduleAliases": {
+    "@Api": "server/api",
+    "@Services": "server/services",
+    "@Controllers": "server/controllers",
+    "@Constants": "server/constants",
+    "@Helpers": "server/helpers",
+    "@Middlewares": "server/middlewares",
+    "@Types": "server/types",
+    "@Server": "server"
+  }
+}

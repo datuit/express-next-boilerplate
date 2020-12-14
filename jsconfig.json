@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@Api/*": ["server/api/*"],
+      "@Api": ["server/api/index.js"],
+      "@Constants/*": ["server/constants/*"],
+      "@Controllers/*": ["server/controllers/*"],
+      "@Helpers/*": ["server/helpers/*"],
+      "@Middlewares/*": ["server/middlewares/*"],
+      "@Services/*": ["server/services/*"],
+      "@Server/*": ["./server/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["server/**/*", "pages/**/*"]
+}
